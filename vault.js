@@ -3,17 +3,18 @@ module.exports = function() {
 
   let vault = {};
 
-  module.setValue = function( key, value ){
-    vault[key]  = value;
-  }
+  return {
 
-  module.getValue = function ( key ){
-    if (vault.hasOwnProperty(key)){
-      return vault[key];
-    } else { return null; }
-  }
+    setValue : function( key, value ){
+      vault[key]  = value;
+    },
 
-  return module;
+    getValue : function ( key ){
+      if (vault.hasOwnProperty(key)){
+        return vault[key];
+      } else { return null; }
+    }
+  }
 
 };
 
